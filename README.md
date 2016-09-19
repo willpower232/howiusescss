@@ -1,6 +1,6 @@
 # howiusescss
 
-How I currently use SCSS with only a reliance on [scssphp][https://github.com/leafo/scssphp].
+How I currently use SCSS with only a reliance on [scssphp](https://github.com/leafo/scssphp).
 
 Usage: /scsser/site.css === compilation of /assets/site.scss
 
