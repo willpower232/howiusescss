@@ -1,0 +1,4 @@
+RewriteEngine On
+RewriteBase /
+
+RewriteRule ^scsser/(.*)$ scsser.php?p=$1 [NC,L]
