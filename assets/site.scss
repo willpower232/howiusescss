@@ -137,4 +137,99 @@ $onemargin: 20px;
 
 /* STUFF */
 
-//todo: usage
+.hoverable {
+
+	@include respond-upto($desktop) {
+		background:$red no-repeat top center;width:100%;
+		.content {
+			background:$red;margin-top:100%;
+			* {
+				color:white;
+			}
+		}
+	}
+
+	@include respond-upto($tablet) {
+		&:nth-child(n + 1) {
+			margin-top:20px;
+		}
+	}
+
+	@include respond-from($tablet, $desktop) {
+		@include columns(6);
+		&:nth-child(n + 3) {
+			margin-top:20px;
+		}
+	}
+
+	@include respond-from($desktop) {
+		@include columns(4);
+		background:$bodygrey no-repeat top center;height:360px;overflow:hidden;position:relative;
+		&:nth-child(n + 4) {
+			margin-top:20px;
+		}
+		.content {
+			background:white;position:absolute;top:78%;
+		}
+		&:hover .content {
+			background:$red;bottom:0;top:auto;
+			* {
+				color:white;
+			}
+		}
+	}
+
+	.content {
+		padding:20px;
+	}
+
+}
+
+.floatedgrid {
+	@include row();
+
+	.intro,.content,.left,.right {
+		float:left;
+	}
+
+	.intro {
+		@include acolumn(4);
+	}
+
+	.content {
+		@include acolumn(6);
+		@include indents(1);
+		.wrapper {
+			@include row();
+			.left,.right {
+				@include acolumn(3,6);
+			}
+		}
+	}
+
+}
+
+.flexedgrid {
+
+	&,.content {
+		display:flex;flex-wrap:wrap;justify-content:space-between;
+	}
+
+	.intro {
+		@include columns(4);
+	}
+
+	.content {
+		@include columns(6);
+		margin-left:auto;
+		.left,.right {
+			@include columns(3,6);
+		}
+	}
+
+}
+
+input,textarea {
+	@include placeholder(white);
+	background:black;border:0;
+}
