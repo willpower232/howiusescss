@@ -77,6 +77,15 @@ hgroup,p,ul,code,figure,dl {
 //image folder shortcut
 $imgdir: "/assets/front/img/";
 
+//if you are using SVG files and have fallback PNG images
+// - clients that support double backgrounds and linear gradients also support svg
+// source https://css-tricks.com/svg-fallbacks/
+// - if you aren't supporting Android 2.3, swap the gradient for "none" for a minor performance tweak
+@mixin background-svg($file) {
+	background-image:url($imgdir + $file + ".png");
+	background-image:linear-gradient(transparent, transparent), url($imgdir + $file + ".svg");
+}
+
 //clearfix of choice
 .cf {
 	&:before,&:after {
