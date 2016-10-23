@@ -17,3 +17,5 @@ I alphabetise the properties to make them easier to locate quickly and also to c
 All lines are tab indented and I don't separate the properties with spaces, probably from anciently making CSS as small as possible.
 
 I avoid unnecessary and unused parts of the selectors keeping the output as lean as possible.
+
+I don't globally set `box-sizing:border-box;` because I have a fondness of `content-box` but do use it within individual elements that need it.
