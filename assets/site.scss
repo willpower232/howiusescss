@@ -144,6 +144,19 @@ $onemargin: 20px;
 	}
 }
 
+//prettify the select element
+//- note the z-indexes to place the select ON TOP of the fake down icon
+//- any extra form styling can be applied in context to blend the select element in
+.selectwrapper {
+	background:white;overflow:hidden;position:relative;
+	&:after {
+		background:url($imgdir + "arrow/down.svg") no-repeat left center;content:"";height:40px;position:absolute;right:0;top:0;width:30px;z-index:2;
+	}
+	select {
+		background:none;border:0;color:black;font-size:18px;height:40px;position:relative;text-indent:10px;width:120%;z-index:3;
+	}
+}
+
 /* STUFF */
 
 .hoverable {
