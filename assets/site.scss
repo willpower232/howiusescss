@@ -78,9 +78,9 @@ hgroup,p,ul,code,figure,dl {
 $imgdir: "/assets/front/img/";
 
 //if you are using SVG files and have fallback PNG images
-// - clients that support double backgrounds and linear gradients also support svg
-// source https://css-tricks.com/svg-fallbacks/
-// - if you aren't supporting Android 2.3, swap the gradient for "none" for a minor performance tweak
+//- clients that support double backgrounds and linear gradients also support svg
+//  source https://css-tricks.com/svg-fallbacks/
+//- if you aren't supporting Android 2.3, swap the gradient for "none" for a minor performance tweak
 @mixin background-svg($file) {
 	background-image:url($imgdir + $file + ".png");
 	background-image:linear-gradient(transparent, transparent), url($imgdir + $file + ".svg");
@@ -101,7 +101,7 @@ $imgdir: "/assets/front/img/";
 	@include cf;
 }
 
-// 11 column, 1135px grid
+//11 column, 1135px grid
 $onecolumn: 85px;
 $onemargin: 20px;
 @function grid-parentwidth($maxcols:11) {
