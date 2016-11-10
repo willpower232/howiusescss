@@ -87,13 +87,18 @@ $imgdir: "/assets/front/img/";
 }
 
 //clearfix of choice
-.cf {
+//- if you want to include a clearfix in certain breakpoints (between flexes),
+//  including a mixin is the best way as placeholders and extending are not effective
+@mixin cf {
 	&:before,&:after {
 		content:" ";display:table;
 	}
 	&:after {
 		clear:both;
 	}
+}
+.cf {
+	@include cf;
 }
 
 // 11 column, 1135px grid
