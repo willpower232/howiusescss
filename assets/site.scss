@@ -7,43 +7,6 @@ $nice-semibold: 600;
 $nice-bold: 700;
 $nice-black: 900;
 
-//responsive shortcuts
-$tablet: 900;
-$desktop: 1200;
-@mixin respond-from($breakpoint, $to:false) {
-	@if $to {
-		@media only screen and (min-width: $breakpoint + px) and (max-width: $to + px) {
-			@content;
-		}
-	}
-	@else {
-		@media only screen and (min-width: $breakpoint + px) {
-			@content;
-		}
-	}
-}
-
-@mixin respond-upto($breakpoint) {
-	@media only screen and (max-width: $breakpoint + px) {
-		@content;
-	}
-}
-
-//similar to container I guess
-//set max widths to grid widths (excluding the outermost margin of course)
-.padded {
-	margin:0 auto;padding:0 18px;
-	@include respond-from($tablet) {
-		max-width:600px;padding:0 22px;
-	}
-	@include respond-from(900) {
-		max-width:800px;
-	}
-	@include respond-from($desktop) {
-		max-width:1100px;padding:0 20px;
-	}
-}
-
 /* CROSS REFERENCE TO DESIGN (credit he who shall not be named) */
 /*html {
 	background:url("/path/to/design.jpg") no-repeat scroll center top;
@@ -128,6 +91,43 @@ $onemargin: 20px;
 @mixin row($maxcols:11) {
 	@extend .cf;
 	margin-left:grid-margin($maxcols) * -1!important;
+}
+
+//responsive shortcuts
+$tablet: 900;
+$desktop: 1200;
+@mixin respond-from($breakpoint, $to:false) {
+	@if $to {
+		@media only screen and (min-width: $breakpoint + px) and (max-width: $to + px) {
+			@content;
+		}
+	}
+	@else {
+		@media only screen and (min-width: $breakpoint + px) {
+			@content;
+		}
+	}
+}
+
+@mixin respond-upto($breakpoint) {
+	@media only screen and (max-width: $breakpoint + px) {
+		@content;
+	}
+}
+
+//similar to container I guess
+//set max widths to grid widths (excluding the outermost margin of course)
+.padded {
+	margin:0 auto;padding:0 18px;
+	@include respond-from($tablet) {
+		max-width:600px;padding:0 22px;
+	}
+	@include respond-from(900) {
+		max-width:800px;
+	}
+	@include respond-from($desktop) {
+		max-width:1100px;padding:0 20px;
+	}
 }
 
 //placeholder prefixer, note the opacity!
