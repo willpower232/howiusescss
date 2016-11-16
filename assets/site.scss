@@ -7,6 +7,33 @@ $nice-semibold: 600;
 $nice-bold: 700;
 $nice-black: 900;
 
+//roll your own fonts, perhaps with help from the fontsquirrel generator
+$fontdir: "/assets/fonts/";
+
+@font-face {
+	font-family:'montserratbold';
+	src:url($fontdir + 'montserrat-bold-webfont.woff2') format('woff2'),
+		url($fontdir + 'montserrat-bold-webfont.woff') format('woff');
+	font-weight:normal;
+	font-style:normal;
+}
+
+@font-face {
+	font-family:'montserratregular';
+	src:url($fontdir + 'montserrat-regular-webfont.woff2') format('woff2'),
+		url($fontdir + 'montserrat-regular-webfont.woff') format('woff');
+	font-weight:normal;
+	font-style:normal;
+}
+
+@font-face {
+	font-family:'montserratsemibold';
+	src:url($fontdir + 'montserrat-semibold-webfont.woff2') format('woff2'),
+		url($fontdir + 'montserrat-semibold-webfont.woff') format('woff');
+	font-weight:normal;
+	font-style:normal;
+}
+
 /* CROSS REFERENCE TO DESIGN (credit he who shall not be named) */
 /*html {
 	background:url("/path/to/design.jpg") no-repeat scroll center top;
